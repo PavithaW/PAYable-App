@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cba.payable">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".PayableApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Launcher"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".Home"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Signup"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SalePad"
+            android:label="Sale"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SalePad_Keyentry"
+            android:label="Sale"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EReceipt"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignaturePad"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".UpdateSignaturePad"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".OpenTransations"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TxDetail"
+            android:label="Transaction Detail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settlement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settlement2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CloseTransations"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Filter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SwipeLast4"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Setting"
+            android:label="Settings"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingsSecondary"
+            android:label="SettingsSecondary"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeviceList"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Language"
+            android:label="Language"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!--
+        <activity
+            android:name=".TransactionActivityEMVV4"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        -->
+        <activity
+            android:name=".DsSalesAudio"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePwd"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".DeviceInfo"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".BatchHistory"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangeLanguageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VoidReceiptActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendTextActivity"
+            android:label="@string/title_activity_send_text"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendEmailActivity"
+            android:label="@string/title_activity_send_text"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SalesReceiptActivity"
+            android:label="@string/title_activity_sales_receipt"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SalesReceiptResendActivity"
+            android:label="@string/title_activity_sales_receipt"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettlementHistoryDetails_Activity"
+            android:label="@string/title_activity_settlement_history_details_"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BatchTransactions"
+            android:label="@string/title_activity_sales_receipt"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MerchantProfile_Activity"
+            android:label="@string/title_activity_merchant_profile_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderTrackingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LogErrorsActivity"
+            android:label="@string/title_activity_log_errors"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LogDescriptionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUpActivity"
+            android:label="@string/title_activity_sign_up"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BluetoothScanActivity"
+            android:label="@string/title_activity_bluetooth_scan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Rejected"
+            android:label="@string/title_activity_rejected"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Approval"
+            android:label="@string/title_activity_approval"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SelectPaymentMethod"
+            android:label="@string/title_activity_select_payment_method"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".KeyEntryActivity"
+            android:label="@string/title_activity_key_entry"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".ViewTransactionsActivity"
+            android:label="@string/title_activity_view_transactions" />
+        <activity android:name=".LoginSecondary"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".SignUpSecondary"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".TestViewActivity"/>
+    </application>
+
+</manifest>
