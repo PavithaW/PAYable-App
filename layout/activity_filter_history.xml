@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <RelativeLayout
+            android:id="@+id/rlHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/splash_bg">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/Filter"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txtHistoryAmount" />
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/back_nav"
+                android:onClick="onNavBack" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOne"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#f2f2f2">
+
+            <TextView
+                android:id="@+id/txtFilterOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#dcdcdc"
+                android:padding="10dp"
+                android:text="@string/FilterOptions"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/txtHistoryAmount"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txtFilterOptions"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imgCalenderStart"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/calendar_icon_2" />
+
+                    <TextView
+                        android:id="@+id/txtStarts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/imgCalenderStart"
+                        android:text="@string/Starts"
+                        android:textColor="@color/calculator_color"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                    <TextView
+                        android:id="@+id/txtSelectDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="#e1e1e1"
+                        android:hint="@string/SelectDate"
+                        android:padding="10dp"
+                        android:textColor="#1d1d1d"
+                        android:textColorHint="#1d1d1d"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/imgCalenderEnd"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/calendar_icon_2" />
+
+                    <TextView
+                        android:id="@+id/txtEnds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/imgCalenderEnd"
+                        android:text="@string/Ends"
+                        android:textColor="@color/calculator_color"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                    <TextView
+                        android:id="@+id/txtSelectEndDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="#e1e1e1"
+                        android:hint="@string/SelectDate"
+                        android:padding="10dp"
+                        android:textColor="#1d1d1d"
+                        android:textColorHint="#1d1d1d"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtCardType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgCardType"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/imgCardType"
+            android:background="#dcdcdc"
+            android:padding="10dp"
+            android:text="@string/CardType"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/txtHistoryAmount"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1.5"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#f2f2f2"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlVisa"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.24">
+
+                    <ImageView
+                        android:id="@+id/imgVisa"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/visacard_icon" />
+
+                    <TextView
+                        android:id="@+id/txtVisa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imgVisa"
+                        android:paddingLeft="20dp"
+                        android:text="@string/Visa"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                    <CheckBox
+                        android:id="@+id/chkVisa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:button="@drawable/custom_checkbox"
+                        android:scaleX="0.70"
+                        android:scaleY="0.70"
+                        android:textColor="@color/calculator_color"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlMaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.24">
+
+                    <ImageView
+                        android:id="@+id/imgMaster"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/mastercard_icon" />
+
+                    <TextView
+                        android:id="@+id/txtMaster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imgMaster"
+                        android:paddingLeft="20dp"
+                        android:text="@string/MasterCard"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                    <CheckBox
+                        android:id="@+id/chkMaster"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:button="@drawable/custom_checkbox"
+                        android:buttonTint="#1474be"
+                        android:scaleX="0.70"
+                        android:scaleY="0.70"
+                        android:textColor="@color/calculator_color"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlAmex"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.24">
+
+                    <ImageView
+                        android:id="@+id/imgAmex"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/amex" />
+
+                    <TextView
+                        android:id="@+id/txtAmex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imgAmex"
+                        android:paddingLeft="20dp"
+                        android:text="@string/Amex"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                    <CheckBox
+                        android:id="@+id/chkAmex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:button="@drawable/custom_checkbox"
+                        android:buttonTint="#1474be"
+                        android:scaleX="0.70"
+                        android:scaleY="0.70"
+                        android:textColor="@color/calculator_color"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlDiners"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="0.24">
+
+                    <ImageView
+                        android:id="@+id/imgDiners"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/diners_club" />
+
+                    <TextView
+                        android:id="@+id/txtDiners"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/imgDiners"
+                        android:paddingLeft="20dp"
+                        android:text="@string/DinersClub"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                    <CheckBox
+                        android:id="@+id/chkDiners"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:button="@drawable/custom_checkbox"
+                        android:buttonTint="#1474be"
+                        android:scaleX="0.70"
+                        android:scaleY="0.70"
+                        android:textColor="@color/calculator_color"
+                        android:textSize="@dimen/txtHistoryAmount" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.3">
+
+            <RelativeLayout
+                android:id="@+id/rlFilter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/sign_in_btn_selector"
+                android:onClick="onFilter">
+
+                <ImageView
+                    android:id="@+id/imgCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/check_bottom" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

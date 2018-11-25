@@ -1,0 +1,483 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:splitMotionEvents="false"
+    android:weightSum="3"
+    tools:context="com.cba.payable.SalePad_Keyentry">
+
+    <RelativeLayout
+        android:id="@+id/rlSaleHeader"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.3"
+        android:background="@drawable/splash_bg">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/Sale"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@android:color/transparent"
+            android:onClick="onNavBack">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back_nav" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBattery"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:onClick="onBatteryClick"
+            android:visibility="gone">
+
+            <com.mpos.util.AnimatedGifImageView
+                android:id="@+id/gifView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp" />
+
+            <ImageView
+                android:id="@+id/imgBattery"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="onBatteryClick" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBody"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2.7"
+        android:background="@color/white"
+        android:splitMotionEvents="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:id="@+id/rlNumberDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlValue"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="8"
+                        android:gravity="right">
+
+                        <EditText
+                            android:id="@+id/txtCalValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:background="#FFF"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:gravity="right"
+                            android:hint="0.00"
+                            android:text=""
+                            android:textColor="@color/calculator_color"
+                            android:textSize="@dimen/number_pad" />
+
+                        <ImageButton
+                            android:id="@+id/imgClose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@+id/txtCalValue"
+                            android:layout_marginTop="-10dp"
+                            android:layout_toRightOf="@+id/txtCalValue"
+                            android:background="@drawable/close_btn"
+                            android:onClick="onKeyPlus" />
+
+                        <TextView
+                            android:id="@+id/txtv_rs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/txtCalValue"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/txtCalValue"
+                            android:text="Rs."
+                            android:textSize="26sp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <!--
+                                            <Button
+                                                android:layout_width="0dp"
+                                                android:layout_weight="3"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:background="@color/sale_moreoptions"
+                                                android:drawableRight="@drawable/checked_filter"
+                                                android:text="LKR" />
+                    -->
+                    <!--<LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:background="@color/sale_moreoptions"
+                        android:layout_height="wrap_content">-->
+                    <TextView
+                        android:id="@+id/txtv_currency_type"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:text="LKR"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/imgv_cflag"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_weight="2"
+                        android:src="@drawable/flag_lkr" />
+                    <!--</LinearLayout>-->
+
+                    <!--<View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtReaderStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/optionSelectView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/btnMoreOptions"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:background="@drawable/sale_moreoption_btn_selector"
+                    android:minHeight="50dp"
+                    android:onClick="onMoreOptions"
+                    android:text="More payment options"
+                    android:textColor="#0C4734"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnClearOptions"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/sale_clear_btn_selector"
+                    android:onClick="onClearOptions"
+                    android:text="CLEAR"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlCalculator"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="2.5"
+                android:splitMotionEvents="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:splitMotionEvents="false"
+                    android:weightSum="4">
+
+                    <!-- First Row -->
+
+                    <RelativeLayout
+                        android:id="@+id/rlRowOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:splitMotionEvents="false">
+
+                        <LinearLayout
+                            android:id="@+id/lnRowOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:splitMotionEvents="false">
+
+                            <Button
+                                android:id="@+id/btnOne"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKey1"
+                                android:text="1"
+                                android:textColor="@color/calculator_color"
+                                android:textSize="24sp" />
+
+                            <Button
+                                android:id="@+id/btnTwo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKey2"
+                                android:text="2"
+                                android:textColor="@color/calculator_color"
+                                android:textSize="24sp" />
+
+                            <Button
+                                android:id="@+id/btnThree"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKey3"
+                                android:text="3"
+                                android:textColor="@color/calculator_color"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!-- Second Row -->
+
+                    <RelativeLayout
+                        android:id="@+id/rlRowTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:splitMotionEvents="false">
+
+                        <LinearLayout
+                            android:id="@+id/lnRowTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnFour"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKey4"
+                                android:text="4"
+                                android:textColor="@color/calculator_color"
+                                android:textSize="24sp" />
+
+                            <Button
+                                android:id="@+id/btnFive"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKey5"
+                                android:text="5"
+                                android:textColor="@color/calculator_color"
+                                android:textSize="24sp" />
+
+                            <Button
+                                android:id="@+id/btnSix"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKey6"
+                                android:text="6"
+                                android:textColor="@color/calculator_color"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!-- Third Row -->
+
+                    <RelativeLayout
+                        android:id="@+id/rlRowThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:splitMotionEvents="false">
+
+                        <LinearLayout
+                            android:id="@+id/lnRowThree"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnSeven"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKey7"
+                                android:text="7"
+                                android:textColor="@color/calculator_color"
+                                android:textSize="24sp" />
+
+                            <Button
+                                android:id="@+id/btnEight"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKey8"
+                                android:text="8"
+                                android:textColor="@color/calculator_color"
+                                android:textSize="24sp" />
+
+                            <Button
+                                android:id="@+id/btnNine"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKey9"
+                                android:text="9"
+                                android:textColor="@color/calculator_color"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <!-- Fourth Row -->
+
+                    <RelativeLayout
+                        android:id="@+id/rlRowFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:splitMotionEvents="false">
+
+                        <LinearLayout
+                            android:id="@+id/lnRowFour"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btnDoubleZero"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKeydouble"
+                                android:text="00"
+                                android:textSize="24sp" />
+
+                            <Button
+                                android:id="@+id/btnZero"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKey0"
+                                android:text="0"
+                                android:textSize="24sp" />
+
+                            <Button
+                                android:id="@+id/btnClear"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/cal_selector"
+                                android:onClick="onKeyC"
+                                android:text="C"
+                                android:textSize="24sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlReadCard"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.5"
+                android:background="@drawable/sign_in_btn_selector"
+                android:onClick="onReadCard"
+                android:splitMotionEvents="false">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/txtReadCard"
+                    android:background="@drawable/next_arrow"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtReadCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/ChargeCard"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+
+

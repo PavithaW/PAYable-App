@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.35"
+            android:background="@drawable/splash_bg" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/splash_bg" >
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/DeviceInfo"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlBack"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@android:color/transparent"
+                    android:onClick="onNavBack" >
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/back_nav" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rlBody"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rlHeader"
+            android:layout_weight="3.65" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" >
+
+                    <TextView
+                        android:id="@+id/lblIMEI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginTop="29dp"
+                        android:text="IMEI :"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/txtIMEI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/lblIMEI"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/lblIMEI"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/white"
+                        android:editable="false"
+                        android:ems="10"
+                        android:textColor="@android:color/black" >
+                    </EditText>
+
+                    <RelativeLayout
+                        android:id="@+id/rlIMEI"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.05dp"
+                        android:layout_alignLeft="@+id/txtIMEI"
+                        android:layout_alignRight="@+id/txtIMEI"
+                        android:layout_below="@+id/txtIMEI"
+                        android:background="#E5E5E5" >
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/lblSIM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txtIMEI"
+                        android:layout_below="@+id/txtIMEI"
+                        android:layout_marginTop="29dp"
+                        android:text="SimSerial :"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/txtSimId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/lblSIM"
+                        android:layout_alignRight="@+id/rlIMEI"
+                        android:layout_below="@+id/lblSIM"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/white"
+                        android:editable="false"
+                        android:ems="10"
+                        android:textColor="@android:color/black" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlSimId"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.05dp"
+                        android:layout_alignLeft="@+id/txtSimId"
+                        android:layout_alignRight="@+id/txtSimId"
+                        android:layout_below="@+id/txtSimId"
+                        android:background="#E5E5E5" >
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/sign_in_btn_selector"
+                        android:onClick="onSend" >
+
+                        <TextView
+                            android:id="@+id/txtSend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="Send"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+                    
+                    <EditText
+                        android:id="@+id/edtBankCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/rlSimId"
+                        android:layout_alignRight="@+id/rlSimId"
+                        android:layout_below="@+id/txtSimId"
+                        android:layout_marginTop="30dp"
+                        android:background="@android:color/white"
+                        android:inputType="textNoSuggestions"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter Bank Code"
+                        android:imeOptions="actionNext"                      
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/txtfields_color" >
+
+                    </EditText>
+                    
+                    <RelativeLayout
+                        android:id="@+id/rlBankCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.05dp"
+                        android:layout_alignLeft="@+id/edtBankCode"
+                        android:layout_alignRight="@+id/edtBankCode"
+                        android:layout_below="@+id/edtBankCode"
+                        android:background="#E5E5E5" >
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/edttag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/edtBankCode"
+                        android:layout_alignRight="@+id/edtBankCode"
+                        android:layout_below="@+id/edtBankCode"
+                        android:layout_marginTop="30dp"
+                        android:background="@android:color/white"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter Tag"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@color/txtfields_color" >
+                    </EditText>
+
+                    <RelativeLayout
+                        android:id="@+id/rlTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.05dp"
+                        android:layout_alignLeft="@+id/edttag"
+                        android:layout_alignRight="@+id/edttag"
+                        android:layout_below="@+id/edttag"
+                        android:background="#E5E5E5" >
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="5dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <ImageView
+            android:id="@+id/imgCardIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:src="@drawable/visacard_icon" />
+
+        <LinearLayout
+            android:padding="2dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="90"
+            android:orientation="vertical">
+
+            <!-- Top Line -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/txtCardName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="CARD/TEST"
+                    android:singleLine="true"
+                    android:textColor="@color/calculator_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtSerialNo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:gravity="center"
+                    android:text="5473889"
+                    android:textColor="#899395"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:gravity="right"
+                    android:text="Rs.404.25"
+                    android:textColor="@color/signin_btn"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Second Line -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="2015/08/23  09:23"
+                    android:textColor="#899395"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/imghistory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:visibility="invisible"
+                    android:src="@drawable/history_check_icon" />
+
+                <TextView
+                    android:id="@+id/txtType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="30"
+                    android:gravity="right"
+                    android:text="Sale"
+                    android:textColor="#899395"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Bottom Line -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/txtTrackingid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:text="ABC 150"
+                    android:textColor="@color/signin_btn"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/instTv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:gravity="right"
+                    android:text="int : 36"
+                    android:layout_gravity="right"
+                    android:textColor="#899395"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/settings_selector"
+        android:descendantFocusability="blocksDescendants">
+
+        <TextView
+            android:id="@+id/txtCardName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgCardIcon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imgCardIcon"
+            android:text="CARD/TEST"
+            android:textColor="@color/calculator_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtSerialNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtDate"
+            android:layout_alignLeft="@+id/imghistory"
+            android:layout_alignStart="@+id/imghistory"
+            android:text="5473889"
+            android:textColor="#899395"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtSerialNo"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="Rs.404.25"
+            android:textColor="@color/signin_btn"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtCardName"
+            android:layout_below="@+id/txtCardName"
+            android:layout_marginTop="5dp"
+            android:text="2015/08/23  09:23"
+            android:textColor="#899395"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imghistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtDate"
+            android:layout_marginLeft="49dp"
+            android:layout_marginStart="49dp"
+            android:layout_toEndOf="@+id/txtDate"
+            android:layout_toRightOf="@+id/txtDate"
+            android:src="@drawable/history_check_icon" />
+
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txtCardName"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Sale"
+            android:textColor="#899395"
+            android:textSize="13sp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/notregistered_color"></RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtTrackingid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtDate"
+            android:layout_below="@+id/imghistory"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="ABC 150"
+            android:textColor="@color/signin_btn"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imgCardIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/visacard_icon" />
+
+        <TextView
+            android:id="@+id/instTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtType"
+            android:layout_alignBottom="@+id/txtType"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/txtType"
+            android:layout_toStartOf="@+id/txtType"
+            android:text="int : 36"
+            android:textColor="#899395"
+            android:textSize="12sp" />
+
+    </RelativeLayout>-->
+
+</LinearLayout>

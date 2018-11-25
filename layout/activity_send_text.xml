@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lnMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="3" >
+
+        <RelativeLayout
+            android:id="@+id/rlReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_weight="0.5"
+            android:background="@drawable/splash_bg" >
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/SendText"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.2" >
+
+            <TextView
+                android:id="@+id/txtPaymentDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/PaymentDetails"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <RelativeLayout
+                android:id="@+id/rlPayment"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txtPaymentDetails"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/payment_bg" >
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/Amount"
+                    android:textColor="@color/calculator_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtAmountValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txtAmount"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@+id/txtAmount"
+                    android:text="Rs.404.84"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/signin_btn"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtCardName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtAmount"
+                    android:layout_below="@+id/txtAmount"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/CardName"
+                    android:textColor="@color/calculator_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtCardNameValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txtCardName"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/txtCardName"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:text="CBA 15 Test Card"
+                    android:textColor="@color/cardname"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txtApprovalCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/txtCardName"
+                    android:layout_below="@+id/txtCardName"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/ApprovalCode"
+                    android:textColor="@color/calculator_color" />
+
+                <TextView
+                    android:id="@+id/txtApprovalCodeValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txtApprovalCode"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/txtApprovalCode"
+                    android:text="181731"
+                    android:textColor="@color/approvalcode" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.6" >
+
+            <TextView
+                android:id="@+id/txtSendVia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/SendVia"
+                android:textColor="@color/signin_btn" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/txtSendVia"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <EditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="0dip"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/edt_border"
+                    android:ems="10"
+                    android:hint="@string/EnterMobile"
+                    android:imeOptions="actionSend"
+                    android:inputType="phone"
+                    android:paddingLeft="10dp"
+                    android:maxLength="10"
+                    android:textColor="@color/calculator_color"
+                    android:textColorHint="@color/calculator_color"
+                    android:textSize="13sp" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/btnSend"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/send_btn"
+                    android:onClick="onSend"
+                    android:text="@string/Send"
+                    android:textAllCaps="false"
+                    android:textColor="@color/signin_btn" />
+
+                <!-- <RelativeLayout -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="0.5dp" -->
+                <!-- android:background="#E5E5E5" -->
+                <!-- android:layout_below="@+id/edtPhone" -->
+                <!-- android:layout_alignLeft="@+id/edtPhone" -->
+                <!-- android:layout_alignStart="@+id/edtPhone" -->
+                <!-- android:layout_alignRight="@+id/edtPhone" -->
+                <!-- android:layout_alignEnd="@+id/edtPhone"></RelativeLayout> -->
+
+            </LinearLayout>
+
+            <!-- <EditText -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="40dp" -->
+            <!-- android:inputType="phone" -->
+            <!-- android:hint="@string/EnterMobile" -->
+            <!-- android:imeOptions="actionSend" -->
+            <!-- android:textSize="13sp" -->
+            <!-- android:ems="10" -->
+            <!-- android:background="@android:color/transparent" -->
+            <!-- android:layout_marginTop="10dp" -->
+            <!-- android:textColor="@color/calculator_color" -->
+            <!-- android:textColorHint="@color/calculator_color" -->
+            <!-- android:paddingLeft="10dp" -->
+            <!-- android:id="@+id/edtPhone" -->
+            <!-- android:layout_below="@+id/txtSendVia" -->
+            <!-- android:layout_alignLeft="@+id/txtSendVia" -->
+            <!-- android:layout_alignStart="@+id/txtSendVia" -->
+            <!-- android:layout_alignRight="@+id/rlPayment" -->
+            <!-- android:layout_alignEnd="@+id/rlPayment" /> -->
+
+
+            <!-- <RelativeLayout -->
+            <!-- android:id="@+id/rlFooter" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="50dp" -->
+            <!-- android:background="@color/send_bg" -->
+            <!-- android:layout_alignParentBottom="true" -->
+            <!-- android:layout_alignParentLeft="true" -->
+            <!-- android:visibility="gone" -->
+            <!-- android:layout_alignParentStart="true"> -->
+
+
+            <!-- <TextView -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:text="@string/Send" -->
+            <!-- android:textSize="14sp" -->
+            <!-- android:id="@+id/txtSend" -->
+            <!-- android:layout_marginRight="15dp" -->
+            <!-- android:textColor="@color/signin_btn" -->
+            <!-- android:layout_centerVertical="true" -->
+            <!-- android:layout_alignParentRight="true" -->
+            <!-- android:layout_alignParentEnd="true" /> -->
+            <!-- </RelativeLayout> -->
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

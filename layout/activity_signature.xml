@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="4" >
+
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.9" >
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/Amount"
+                android:textColor="@color/calculator_color"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnApproved"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="85dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/txtAmount"
+                android:background="@drawable/approved_btn"
+                android:text="@string/Approved"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtAmountValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtAmount"
+                android:layout_below="@+id/btnApproved"
+                android:layout_marginTop="5dp"
+                android:text="Rs.0.00"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/signin_btn" />
+
+            <Button
+                android:id="@+id/btnClear"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/clearsignature_btn"
+                android:onClick="onClear"
+                android:text="@string/ClearSignature"
+                android:textAllCaps="false"
+                android:textColor="@color/notregistered_signup_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtSinhala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btnApproved"
+                android:layout_centerHorizontal="true"
+                android:text="Sinhala"
+                android:textColor="@color/notregistered_signup_color"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtEnglish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btnApproved"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/txtSinhala"
+                android:text="@string/English"
+                android:textColor="@color/notregistered_signup_color"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtTamil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/txtSinhala"
+                android:layout_alignBottom="@+id/txtSinhala"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/txtSinhala"
+                android:text="Tamil"
+                android:textColor="@color/notregistered_signup_color"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="#D8D8D8" >
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSignature"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="2.4"
+            android:background="@color/white" >
+
+            <com.cba.payable.DrawingArea
+                android:id="@+id/signaturePad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp" />
+
+            <TextView
+                android:id="@+id/txtSignHere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/signhere"
+                android:textSize="58sp"
+                android:visibility="visible"
+                android:text="@string/Signhere"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlFooter"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.7" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout12"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#D8D8D8" >
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/sign_in_btn_selector"
+                android:onClick="onContinue"
+                android:text="@string/Save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtConfirmation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/btnSave"
+                android:gravity="center"
+                android:lineSpacingExtra="1.5dp"
+                android:maxLines="3"
+                android:paddingRight="9dp"
+                android:scrollbars="vertical"
+                android:text="Name, Agree to pay the above total according to my card issuer agreement.Card Ending 1234.Authorization Code xyzdd"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/notregistered_signup_color"
+                android:textSize="13sp" />
+
+           
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

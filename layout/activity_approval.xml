@@ -1,0 +1,210 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.cba.payable.Approval" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.2"
+            android:background="@drawable/splash_bg" >
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Approval"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBody"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.8"
+            android:background="@color/white" >
+
+            <RelativeLayout 
+                android:id="@+id/approvalammount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                     android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                	android:layout_marginRight="10dp"
+                	android:layout_marginTop="10dp"
+                    android:background="@color/green">
+                    
+                    <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:text="APPROVED"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+                    
+                    <TextView
+                    android:id="@+id/txtAmountValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txtAmount"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dp"
+                    android:text="RS 1350.00"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+                    
+                </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/rlPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/approvalammount"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/payment_bg" >               
+
+                <TextView
+                    android:id="@+id/txtCardName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:text="Transaction completed !"
+                    android:textColor="#00FF00"
+                    android:textSize="14sp" />
+
+                 <TextView
+                    android:id="@+id/txtApprovalCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/txtCardName"
+                    android:layout_alignLeft="@+id/txtCardName"
+                    android:layout_below="@+id/txtCardName"
+                    android:text="Signature not required"/>
+
+                <LinearLayout android:id="@+id/carddetail"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtApprovalCode"
+                    android:orientation="horizontal">
+                    
+                    <ImageView
+	                android:id="@+id/img_card"
+	                android:layout_margin="10dp"
+	                android:layout_width="35dp"
+	                android:layout_height="35dp"
+	                android:src="@drawable/visacard_icon" />
+                    
+                    <TextView android:id="@+id/cardEndingTXt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Card ending "/>
+                    
+                    <View
+				        android:layout_width="0dp"
+				        android:layout_height="0dp"
+				        android:layout_weight="1" />  
+                    
+                    <TextView android:id="@+id/txt_card_end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:text="10/2020"
+                        android:textColor="#AA9739"/>
+                    
+                </LinearLayout>
+                
+                <LinearLayout android:id="@+id/authcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/carddetail">
+                    
+                    <ImageView
+	                android:id="@+id/img_lock"
+	                android:layout_margin="10dp"
+	                android:layout_width="35dp"
+	                android:layout_height="35dp"
+	                android:src="@drawable/ic_lock" />
+                    
+                    <TextView android:id="@+id/auth_code_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Authorization code"/>
+                    
+                    <View
+				        android:layout_width="0dp"
+				        android:layout_height="0dp"
+				        android:layout_weight="1" />  
+                    
+                    <TextView android:id="@+id/txt_auth_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:text="2993669"
+                        android:textColor="#AA9739"/>
+                    
+                </LinearLayout>
+
+       
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlOrder"
+                android:layout_width="match_parent"
+                android:layout_height="0.05dp"
+                android:layout_alignLeft="@+id/edtOrder"
+                android:layout_alignRight="@+id/edtOrder"
+                android:layout_below="@+id/edtOrder"
+                android:background="#E5E5E5" >
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/sign_in_btn_selector"
+                android:text="Proceed"
+                android:onClick="onProceed"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/settings_selector" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:src="@drawable/round_icon" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView1"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="February 08"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtSales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtDate"
+            android:layout_below="@+id/txtDate"
+            android:layout_marginTop="3dp"
+            android:text="SALES"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtSalesValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtSales"
+            android:layout_alignBottom="@+id/txtSales"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/txtSales"
+            android:text=""
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtDate"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="14dp"
+            android:text=""
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtVoidValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtVoids"
+            android:layout_alignBottom="@+id/txtVoids"
+            android:layout_alignRight="@+id/txtTotal"
+            android:text=""
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtVoids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtSalesValue"
+            android:layout_alignBottom="@+id/txtSalesValue"
+            android:layout_toLeftOf="@+id/txtVoidValue"
+            android:text="VOID"
+            android:layout_marginRight="5dp"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cal_row_color"
+    android:orientation="horizontal">
+
+    <!-- all tab -->
+    <LinearLayout
+        android:id="@+id/allTabView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_all"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="selectALL"
+            android:paddingTop="10dp"
+            android:src="@drawable/all" />
+
+        <TextView
+            android:id="@+id/textview_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="selectALL"
+            android:paddingBottom="10dp"
+            android:text="ALL"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_all"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/sign_in_btn_selector"
+            android:clickable="true"
+            android:onClick="selectALL" />
+
+    </LinearLayout>
+
+    <!-- lkr tab-->
+    <LinearLayout
+        android:id="@+id/lkrTabView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_lkr"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="selectLKR"
+            android:paddingTop="10dp"
+            android:src="@drawable/flag_lkr" />
+
+        <TextView
+            android:id="@+id/textview_lkr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="selectLKR"
+            android:paddingBottom="10dp"
+            android:text="LKR"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_lkr"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:clickable="true"
+            android:onClick="selectLKR" />
+
+    </LinearLayout>
+
+
+    <!-- usd tab -->
+    <LinearLayout
+        android:id="@+id/usdTabView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_usd"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="selectUSD"
+            android:paddingTop="10dp"
+            android:src="@drawable/flag_usd" />
+
+        <TextView
+            android:id="@+id/textview_usd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="selectUSD"
+            android:paddingBottom="10dp"
+            android:text="USD"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_usd"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:clickable="true"
+            android:onClick="selectUSD" />
+
+    </LinearLayout>
+
+    <!-- GBP tab -->
+    <LinearLayout
+        android:id="@+id/gbpTabView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_gbp"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="selectGBP"
+            android:paddingTop="10dp"
+            android:src="@drawable/flag_gbp" />
+
+        <TextView
+            android:id="@+id/textview_gbp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="selectGBP"
+            android:paddingBottom="10dp"
+            android:text="GBP"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_gbp"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:clickable="true"
+            android:onClick="selectGBP" />
+
+    </LinearLayout>
+
+    <!-- euro tab -->
+    <LinearLayout
+        android:id="@+id/euroTabView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_eur"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:onClick="selectEUR"
+            android:paddingTop="10dp"
+            android:src="@drawable/flag_eur" />
+
+        <TextView
+            android:id="@+id/textview_eur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="selectEUR"
+            android:paddingBottom="10dp"
+            android:text="EUR"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_eur"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:clickable="true"
+            android:onClick="selectEUR" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

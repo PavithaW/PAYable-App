@@ -1,0 +1,348 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/splash_bg">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Merchant Profile"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlBack"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/transparent"
+                android:onClick="onNavBack">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/back_nav" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/MerchantUserName"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/signin_btn"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/lblBusinessName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/BusinessName"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtBusinessName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/signin_btn"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/lblCoporateAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/CorporateAddress"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtCoporateAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/signin_btn"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/lblAppVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/Appversion"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtAppVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/signin_btn"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/lblCardType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/CreditCardReader"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtCardType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/signin_btn"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:id="@+id/tab_imgs"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cal_row_color"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/image_lkr"
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onCurrencySelect"
+                    android:src="@drawable/flag_lkr"/>
+
+                <ImageView
+                    android:id="@+id/image_usd"
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onCurrencySelect"
+                    android:src="@drawable/flag_usd" />
+
+                <ImageView
+                    android:id="@+id/image_gbp"
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onCurrencySelect"
+                    android:src="@drawable/flag_gbp"/>
+
+                <ImageView
+                    android:id="@+id/image_eur"
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onCurrencySelect"
+                    android:src="@drawable/flag_eur" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/tab_txts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/cal_row_color"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_lkr"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="onCurrencySelect"
+                    android:text="LKR"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textview_usd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="onCurrencySelect"
+                    android:text="USD"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textview_gbp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="onCurrencySelect"
+                    android:text="GBP"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/textview_eur"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:onClick="onCurrencySelect"
+                    android:text="EUR"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/tab_views"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal">
+
+                <View android:id="@+id/view_lkr"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onCurrencySelect"/>
+
+                <View android:id="@+id/view_usd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onCurrencySelect"/>
+
+                <View android:id="@+id/view_gbp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onCurrencySelect"/>
+
+                <View android:id="@+id/view_eur"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="onCurrencySelect"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblMerchantId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/MerchantId"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtMerchantId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/signin_btn"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/lblTerminalId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/TerminalId"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtTerminalId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/signin_btn"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/lblAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/MaxAmount"
+                android:textColor="#666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/txtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@color/signin_btn"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

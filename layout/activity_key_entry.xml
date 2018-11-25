@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1E82C5">
+
+        <TextView
+            android:id="@+id/lblHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Enter Card Details"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_nav" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCard"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="200dp"
+        android:background="#f2f2f2">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_emty_card" />
+
+        <EditText
+            android:id="@+id/edtOne"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="xxxx"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="13sp">
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/edtTwo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/edtOne"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="xxxx"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/edtThree"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/edtTwo"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="xxxx"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/edtFour"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/edtThree"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:hint="xxxx"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_secondcardview" />
+
+
+    <Button
+        android:id="@+id/btnCharge"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rlCard"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#1E82C5"
+        android:text="Charge"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"></Button>
+
+    <TextView
+        android:id="@+id/txtEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rlCard"
+        android:layout_alignLeft="@+id/rlCard"
+        android:layout_alignRight="@+id/rlCard"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="69dp"
+        android:text="Enter card Number and expiry date"
+        android:textColor="@android:color/black" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rlTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#f2f2f2">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"></RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="17dp"
+            android:layout_toLeftOf="@+id/relativeLayout1"
+            android:text="AMOUNT :"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtAmountValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/relativeLayout1"
+            android:text="Rs.1350.00"
+            android:textColor="#1E82C5"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

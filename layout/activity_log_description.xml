@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/signin_btn" >
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Logs"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lblLogClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="20dp"
+        android:text="Log Class : "
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/lblLogDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblLogToken"
+        android:layout_below="@+id/lblLogToken"
+        android:layout_marginTop="20dp"
+        android:text="Log Date : "
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/lblLogDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblLogDate"
+        android:layout_below="@+id/lblLogDate"
+        android:layout_marginTop="20dp"
+        android:text="Log Description : "
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtLogDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblLogDes"
+        android:layout_below="@+id/lblLogDes"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="1.5dp"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtLogClass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblLogClass"
+        android:layout_alignBottom="@+id/lblLogClass"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lblLogClass"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtLogDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblLogDate"
+        android:layout_alignBottom="@+id/lblLogDate"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lblLogDate"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/lblLogLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblLogClass"
+        android:layout_below="@+id/lblLogClass"
+        android:layout_marginTop="20dp"
+        android:text="Log Level :"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtLogLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblLogLevel"
+        android:layout_alignBottom="@+id/lblLogLevel"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lblLogLevel"
+        android:text=""
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/lblLogToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblLogLevel"
+        android:layout_below="@+id/lblLogLevel"
+        android:layout_marginTop="20dp"
+        android:text="Log Token : "
+        android:textColor="#666666"
+        android:textSize="14sp" />
+    
+      <TextView
+        android:id="@+id/txtLogToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/lblLogToken"
+        android:layout_alignBottom="@+id/lblLogToken"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lblLogToken"
+        android:text=""
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="14sp" />
+
+</RelativeLayout>
